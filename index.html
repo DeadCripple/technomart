@@ -17,9 +17,9 @@
         </div>
         <div class="cart-block">
           <ul>
-            <li><a href="#">Закладки</a></li>
-            <li><a href="#">Корзина</a></li>
-            <li><a href="#">Оформить заказ</a></li>
+            <li><a class="bookmarks" href="#">Закладки: 0</a></li>
+            <li><a class="cart" href="#">Корзина: 0</a></li>
+            <li><a class="buy" href="#">Оформить заказ</a></li>
           </ul>
         </div>
       </div>
@@ -32,8 +32,8 @@
           </div>
           <div class="user-block">
             <ul>
-              <li><a href="#">Войти</a></li>
-              <li><a href="#">Регистрация</a></li>
+              <li><a class="login" href="#">Войти</a></li>
+              <li><a class="reg" href="#">Регистрация</a></li>
             </ul>
           </div>
         </div>
@@ -56,38 +56,69 @@
       <section class="index-content-catigory container">
         <div class="flex-row">
           <div class="category-item materials">
-            <div class="category-item-name flag-new">
+            <div class="category-item-name">
               <span class="name">Материалы</span>
-              <a href="#"><span class="description">На любой вкус</span></a>
+              <a span class="description" href="#">На любой вкус</a>
+              <div class="flag flag-new">
+              </div>
             </div>
           </div>
           <div class="category-item tools">
             <div class="category-item-name">
               <span class="name">Инструмент</span>
-              <a href="#"><span class="description">На все случаи</span></a>
+              <a class="description" href="#">На все случаи</a>
+            </div>
+            <div class="flag">
             </div>
           </div>
           <div class="slider">
-            <img src="img/index-slider/slider1.jpg" width="620px" height="266px" alt="">
+            <div class="slide" id="slide1">
+            </div>
+              <div class="slide-title">
+                <h2>Перфораторы</h2>
+                <p>Настоящие мужские игрушки</p>
+              </div>
+            <div class="slider-controls">
+              <label for="btn1"></label>
+              <label for="btn2"></label>
+            </div>
+
+            <div class="slide" id="slide2">
+            </div>
+              <div class="slide-title">
+                <h2 class="slider-heading">Дрели</h2>
+                <p>Соседям на радость!</p>
+              </div>
+              <div class="slider-controls">
+                <label for="btn1"></label>
+                <label for="btn2"></label>
+              </div>
+            <a class="slider-btn btn" href="#">Открыть каталог</a>
           </div>
         </div>
         <div class="flex-column">
           <div class="category-item machinery">
             <div class="category-item-name">
               <span class="name">Техника</span>
-              <a href="#"><span class="description">Для стройки</span></a>
+              <a class="description" href="#">Для стройки</a>
+              <div class="flag">
+              </div>
             </div>
           </div>
           <div class="category-item discounts">
             <div class="category-item-name">
-              <span class="name">Скидки</span>
-              <a href="#"><span class="description">На 350 товаров</span></a>
+              <span class="name">Скидки 50%</span>
+              <a class="description" href="#">На 350 товаров</a>
+            </div>
+            <div class="flag">
             </div>
           </div>
           <div class="category-item delivery">
             <div class="category-item-name">
               <span class="name">Доставка</span>
-              <a href="#"><span class="description">Бесплатно</span></a>
+              <a class="description" href="#">Бесплатно</a>
+            </div>
+            <div class="flag">
             </div>
           </div>
         </div>
@@ -150,28 +181,28 @@
         </div>
         <div class="manufacturers">
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/bosch.png" alt="BOSCH"></a>
+            <a class="BOSCH" href="#">BOSCH</a>
           </article>
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/makita.png" alt="Makita"></a>
+            <a class="Makita" href="#">Makita</a>
           </article>
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/dewalt.png" alt="DeWalt"></a>
+            <a class="DeWalt" href="#">DeWalt</a>
           </article>
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/интерскол.png" alt="Интерскол"></a>
+            <a class="interscol" href="#">Интерскол</a>
           </article>
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/hitachi.png" alt="Hitachi"></a>
+            <a class="Hitachi" href="#">Hitachi</a>
           </article>
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/lg.png" alt="LG"></a>
+            <a class="LG" href="#">LG</a>
           </article>
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/aeg.png" alt="AEG Power Solution"></a>
+            <a class="AEG" href="#">AEG Power Solution</a>
           </article>
           <article class="manufacturers-item">
-            <a href="#"><img src="img/manufacturers/metabo.png" alt="Metabo"></a>
+            <a class="Metabo" href="#">Metabo</a>
           </article>
         </div>
       </section>
@@ -184,7 +215,7 @@
           </div>
           <div class="services-left-column">
             <ul>
-              <li><button type="button" name="button">Доставка</button></li>
+              <li><button class="active" type="button" name="button">Доставка</button></li>
               <li><button type="button" name="button">Гарантия</button></li>
               <li><button type="button" name="button">Кредит</button></li>
             </ul>
