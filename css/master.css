@@ -434,18 +434,22 @@ header ul {
   height: 266px;
   margin-top: 21px;
   background: #eee;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.slider .slide {
+  width: 620px;
+  height: 265px;
+  padding-top: 1px;
 }
 
 .slider .slide-title {
-  width: 620px;
-  height: 104px;
-  padding-top: 1px;
   margin-bottom: auto;
   font-family: "Cuprum", Tahoma sans-serif;
   color: #fff;
 }
 
-.slider .slide-title h2 {
+.slide .slide-title h2 {
   margin: 20px 25px;
   margin-bottom: 2px;
   font-weight: bold;
@@ -454,11 +458,12 @@ header ul {
   text-transform: uppercase;
 }
 
-.slider .slide-title p {
+.slide .slide-title p {
   margin: 0px 25px;
   font-size: 18px;
   line-height: 24px;
 }
+
 
 .slider a.slider-btn {
   position: absolute;
@@ -466,12 +471,12 @@ header ul {
   left: 25px;
 }
 
-.slider-controls label {
+.slider-controls  .radio-controls label {
   display: inline-block;
   box-sizing: border-box;
   width: 10px;
   height: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   background-color: #fff;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -479,14 +484,67 @@ header ul {
   font-size: 0px;
 }
 
-.slider-controls {
+.slider-controls .radio-controls {
   position: absolute;
   bottom: 30px;
   left: 295px;
 }
 
+.slider-controls .arrow-controls {
+  width: 0;
+  height: 0;
+}
+
+.slider-controls .arrow-controls > * {
+  position: absolute;
+  height: 40px;
+  width: 45px;
+  background: url("../img/arrow-icons.png") no-repeat!important;
+  cursor: pointer;
+}
+
+.arrow-controls .left {
+  top: 113px;
+  left: 0;
+  background-position: 22px 0px!important;
+}
+
+.arrow-controls .right {
+  top: 113px;
+  right: 0;
+  background-position: -82px 0px!important;
+}
+
+body input[type="radio"] {
+  display: none;
+}
+
 .slide {
   display: none;
+}
+
+#btn-1:checked ~ main #slide1,
+#btn-2:checked ~ main #slide2 {
+  display: block;
+}
+
+#btn-1:checked ~ main .slider {
+  background-image: url("../img/index-slider/slider1.jpg");
+}
+
+#btn-2:checked ~ main .slider {
+  background-image: url("../img/index-slider/slider2.jpg");
+}
+
+#btn-1:checked ~ main label[for="btn-1"],
+#btn-2:checked ~ main label[for="btn-2"] {
+  background-color: #ee3643;
+}
+
+#btn-1:checked ~ main .arrow-controls .left,
+#btn-2:checked ~ main .arrow-controls .right {
+  opacity: 0.5;
+  cursor: auto;
 }
 
 .popular-header {

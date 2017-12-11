@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
     <header>
       <div class="top-navigation container">
         <div class="header-logo">
@@ -49,7 +51,6 @@
           </ul>
         </nav>
       </div>
-
     </header>
 
     <main>
@@ -73,26 +74,27 @@
           </div>
           <div class="slider">
             <div class="slide" id="slide1">
-            </div>
               <div class="slide-title">
                 <h2>Перфораторы</h2>
                 <p>Настоящие мужские игрушки</p>
               </div>
-            <div class="slider-controls">
-              <label for="btn1"></label>
-              <label for="btn2"></label>
             </div>
-
             <div class="slide" id="slide2">
-            </div>
               <div class="slide-title">
                 <h2 class="slider-heading">Дрели</h2>
                 <p>Соседям на радость!</p>
               </div>
-              <div class="slider-controls">
-                <label for="btn1"></label>
-                <label for="btn2"></label>
+            </div>
+            <div class="slider-controls">
+              <div class="radio-controls">
+                  <label for="btn-1"></label>
+                  <label for="btn-2"></label>
               </div>
+              <div class="arrow-controls">
+                <label class="left" for="btn-1"></label>
+                <label class="right" for="btn-2"></label>
+              </div>
+            </div>
             <a class="slider-btn btn" href="#">Открыть каталог</a>
           </div>
         </div>
