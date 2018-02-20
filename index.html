@@ -219,13 +219,13 @@
           </div>
           <div class="service-left-column">
             <ul>
-              <li><button class="service-list-active" type="button" name="button">Доставка</button></li>
-              <li><button type="button" name="button">Гарантия</button></li>
-              <li><button type="button" name="button">Кредит</button></li>
+              <li><button class="delivery service-list-active" type="button" name="button">Доставка</button></li>
+              <li><button class="guarantee" type="button" name="button">Гарантия</button></li>
+              <li><button class="credit" type="button" name="button">Кредит</button></li>
             </ul>
           </div>
           <div class="service-right-column">
-            <div class="service-details-active service-item delivery">
+            <div class="service-item delivery service-item-show">
               <h2 class="service-item-title">Доставка</h2>
               <p class="service-item-description">
                 Мы с удовольствием доставим ваш товар прямо<br>
@@ -275,6 +275,10 @@
               заехав к нам в офис:</p>
             <div class="map">
               <img src="img/map.jpg" alt="map" width="300" height="150">
+              <div class="map-popup">
+                <button class="modal-content-close" type="button" name="button" title="Закрыть"></button>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370522!2d30.320889250518306!3d59.938794181787266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2skz!4v1518337003178" width="940" height="446px" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
               <a class="btn" href="#">Заблудились? Напишите нам!</a>
             </div>
           </div>
@@ -337,17 +341,15 @@
         <input id="email-modal" type="email" name="e-mail" value="" placeholder="Для отправки ответа">
         </label>
         <label for="text-modal">Текст письма:
-        <input id="text-modal" type="text" name="text" value="" placeholder="В свободной форме">
+        <textarea id="text-modal" placeholder="В свободной форме"></textarea>
+<!--        <input id="text-modal" type="text" name="text" value="" placeholder="В свободной форме">-->
         </label>
       </form>
       <div class="control-buttons">
         <button class="btn" type="submit" name="button">Отправить</button>
       </div>
     </div>
-    <div class="modal-content-map">
-      <button class="modal-content-close" title="Закрыть" type="button" name="button"></button>
-      <div id="yandex-map"></div>
-    </div>
     <div class="modal-overlay"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>
