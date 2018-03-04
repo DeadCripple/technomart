@@ -53,6 +53,12 @@ event.preventDefault("");
 mapPopUp.classList.remove("map-popup-show");
 });
 
+window.addEventListener("keydown", function (event) {
+if (event.keyCode == 27) {
+if (mapPopUp.classList.contains("map-popup-show")) {
+mapPopUp.classList.remove("map-popup-show");}}
+});
+
 // Как проехать
 var writeUsModalOpen = document.querySelector(".about-right-column .map .btn");
 var writeUsPopup = document.querySelector(".write-us-modal");
@@ -65,16 +71,15 @@ writeUsPopup.classList.add("modal-content-show");
 overlay.classList.add("overlay-show");
 });
 
-
 writeUsModalClose.addEventListener("click", function (event) {
 event.preventDefault("");
 writeUsPopup.classList.remove("modal-content-show");
 overlay.classList.remove("overlay-show");
 });
 
+
 overlay.addEventListener("click", function (event) {
 event.preventDefault("");
 overlay.classList.remove("overlay-show");
 writeUsPopup.classList.remove("modal-content-show");
 });
-
